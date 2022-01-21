@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./Components/navbar.css">
+    <link rel="stylesheet" href="./Components/footer.css">
+    <link rel="stylesheet" href="./Components/main.css">
+</head>
+<body>
+  <div id="navbar1"></div>
+  <img src="./images/1st.PNG" alt="">
+  <img src="./images/2nd.PNG" alt="">
+  <img src="./images/3rd.PNG" alt="">
+  <img src="./images/4th.PNG" alt="">
+  <img src="./images/5th.PNG" alt="">
+  <div id="footer1"></div>  
+</body>
+</html>
+<script type="module">
+    import navbar from "./scripts/navbar.js"
+
+    var navbar1 = document.getElementById("navbar1");
+
+    navbar1.innerHTML = navbar();
+
+    import footer from "./scripts/footer.js"
+
+    var footer1 = document.getElementById("footer1");
+
+    footer1.innerHTML = footer();
+</script>

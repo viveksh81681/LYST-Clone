@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./Components/navbar.css">
+    <link rel="stylesheet" href="./Components/footer.css">
+</head>
+<body>
+  <div id="navbar1"></div>  
+
+  
+
+  <form action="" id="signup">
+    <h2 id="createheading">Create New Account</h2>
+    
+    <input id="email" type="text" placeholder="Enter Your Email"> 
+    <input id="password" type="text" placeholder="Enter Your Password">
+    <button id="sign" >Join Lyst</button>
+  </form>
+
+  <div id="footer1"></div>
+</body>
+</html>
+<script type="module">
+  import navbar from "./scripts/navbar.js"
+
+  var navbar1 = document.getElementById("navbar1");
+
+  navbar1.innerHTML = navbar();
+
+document.querySelector("#sign").addEventListener("click",signup);
+var userArr = JSON.parse(localStorage.getItem("userData"))  || [];
+var data = document.getElementById("append");
+
+
+function signup(e) {
+    e.preventDefault();
+   
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    
+    
+    var usercred = {
+        email : email,
+        password : password,
+    }
+
+    userArr.push(usercred);
+
+    localStorage.setItem("userData",JSON.stringify(userArr));
+
+    alert("Registered Successfull")
+
+    window.location.href = "./signin.html";
+  }
+
+  import footer from "./scripts/footer.js"
+
+  var footer1 = document.getElementById("footer1");
+
+  footer1.innerHTML = footer();
+</script>
