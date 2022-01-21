@@ -11,7 +11,6 @@ function navbar(){
         <h2 id="part"><a href="activewear.html">WOMEN</a></h2>
         <h2 id="part"><a href="mens.html">MEN</a></h2>
         <input id="inputbox" type="text" placeholder="SEARCH (E.G.VALENTINO DRESSES)">
-        <h2 id="part1"><a href="cart.html">CART</a></h2>
     </div>
     <hr>
 </div>`
